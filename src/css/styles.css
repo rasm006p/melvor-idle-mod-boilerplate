@@ -2,3 +2,65 @@
 .modBoilerplate__logo-img {
   width: 100%;
 }
+
+.modded, .modded *{
+  transition: all 0.5s!important;
+}
+.modded {
+  left: 0!important;
+  position: absolute;
+  overflow-x: hidden!important;
+  width: 50px!important;
+}
+
+#page-container {
+  padding-left: 50px!important;
+}
+.modded.open #page-container {
+  padding-left: 250px!important;
+}
+
+.modded.open {
+  width: 250px!important;
+}
+
+.modded li span:not(.nav-img){
+  opacity: 0!important;
+  height: 0!important;
+}
+.modded.open li span:not(.nav-img){
+  opacity: 1!important;
+  height: 50px!important;
+}
+.modded.closed .nav-img{
+  height: 50px!important;
+  width: 50px!important;
+}
+.modded.closed .nav-img img, .modded.closed .nav-img i, .modded.closed .nav-img i{
+  padding: 12px!important;
+  margin-right: 0!important;
+  height: 50px!important;
+  width: 50px!important;
+}
+.modded .nav-main-heading{
+  height: 0!important;
+  opacity: 0!important;
+}
+.modded.open .nav-main-heading{
+  height: 50px!important;
+  opacity: 1!important;
+}
+.modded li{
+  list-style-type: none; 
+}
+
+.modded li a{
+  margin: 0;
+  padding: 0;
+}
+.modded li:not(:has(#nav-current-gp)) a:has(span.text-success){
+  border-left: pink solid 5px;
+}
+.modded li a span.text-success:not(#nav-current-gp){
+  color: pink!important;
+}

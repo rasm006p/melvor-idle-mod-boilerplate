@@ -23,6 +23,15 @@ export async function setup(ctx) {
   await ctx.gameData.addPackage(ModData);
 
   ctx.onInterfaceReady(() => {
+    document.addEventListener("click", (e) => {
+      console.log(e.target)
+      if (e.target.parentNode.id === "sidebar") {
+        document.getElementById("sidebar").classList.toggle("closed");
+        document.getElementById("sidebar").classList.toggle("open");
+      }
+    });
+    document.getElementById("sidebar").classList.add("modded");
+    document.getElementById("sidebar").classList.add("closed");
     const html = document.createElement('div');
     SwalLocale.fire({
       iconHtml: `<img class="modBoilerplate__logo-img" src="${ctx.getResourceUrl(LargeIcon)}" />`,
